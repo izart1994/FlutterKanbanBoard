@@ -202,7 +202,7 @@ class BoardListProvider extends ChangeNotifier {
       scrollingDown = true;
       if (prov.board.listScrollConfig == null) {
         await controller.animateTo(controller.offset + 45,
-            duration: const Duration(milliseconds: 250), curve: Curves.linear);
+            duration: const Duration(milliseconds: 25), curve: Curves.linear);
       } else {
         await controller.animateTo(
             prov.board.listScrollConfig!.offset + controller.offset,
@@ -218,7 +218,7 @@ class BoardListProvider extends ChangeNotifier {
       scrollingUp = true;
       if (prov.board.listScrollConfig == null) {
         await controller.animateTo(controller.offset - 45,
-            duration: const Duration(milliseconds: 250), curve: Curves.linear);
+            duration: const Duration(milliseconds: 25), curve: Curves.linear);
       } else {
         await controller.animateTo(
             controller.offset - prov.board.listScrollConfig!.offset,
