@@ -85,7 +85,7 @@ class ListItemProvider extends ChangeNotifier {
         // AnimatedOpacity(opacity: opacity, duration: duration)
         item.placeHolderAt != PlaceHolderAt.bottom
             ? TweenAnimationBuilder(
-                duration: const Duration(milliseconds: 3000),
+                duration: const Duration(milliseconds: 300),
                 curve: Curves.ease,
                 tween: Tween<double>(begin: 0, end: 1),
                 builder: (context, value, child) {
@@ -149,7 +149,7 @@ class ListItemProvider extends ChangeNotifier {
         ),
         item.placeHolderAt == PlaceHolderAt.bottom
             ? TweenAnimationBuilder(
-                duration: const Duration(milliseconds: 3000),
+                duration: const Duration(milliseconds: 300),
                 curve: Curves.ease,
                 tween: Tween<double>(begin: 0, end: 1),
                 builder: (context, value, child) {
