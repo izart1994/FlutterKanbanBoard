@@ -323,26 +323,22 @@ class _BoardState extends ConsumerState<Board> {
                             scrollDirection: Axis.horizontal,
                             child: Row(
                                 children: boardProv.board.lists
-                                    .map(
-                                        (e) =>
-                                            boardProv.board.lists.indexOf(e) !=
-                                                    boardProv.board.lists
-                                                            .length -
-                                                        1
-                                                ? BoardList(
+                                    .map((e) =>
+                                        boardProv.board.lists.indexOf(e) !=
+                                                boardProv.board.lists.length - 1
+                                            ? BoardList(
+                                                index: boardProv.board.lists
+                                                    .indexOf(e),
+                                              )
+                                            : Row(
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                children: [
+                                                  BoardList(
                                                     index: boardProv.board.lists
                                                         .indexOf(e),
-                                                  )
-                                                : Row(
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .start,
-                                                    children: [
-                                                      BoardList(
-                                                        index: boardProv
-                                                            .board.lists
-                                                            .indexOf(e),
-                                                      ),
+                                                  ),
+                                                  /*
                                                       boardListProv.newList
                                                           ? Container(
                                                               margin:
@@ -460,8 +456,9 @@ class _BoardState extends ConsumerState<Board> {
                                                                                 widget.textStyle)),
                                                                   )),
                                                             )
-                                                    ],
-                                                  ))
+                                                      */
+                                                ],
+                                              ))
                                     .toList()),
                           ),
                         ),
