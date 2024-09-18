@@ -22,8 +22,8 @@ class KanbanBoard extends StatefulWidget {
     this.boardDecoration,
     this.cardTransitionBuilder,
     this.listTransitionBuilder,
-    this.cardTransitionDuration = const Duration(milliseconds: 150),
-    this.listTransitionDuration = const Duration(milliseconds: 150),
+    this.cardTransitionDuration = const Duration(milliseconds: 10),
+    this.listTransitionDuration = const Duration(milliseconds: 10),
     this.listDecoration,
     this.textStyle,
     this.onItemTap,
@@ -114,8 +114,8 @@ class Board extends ConsumerStatefulWidget {
     this.listScrollConfig,
     this.cardTransitionBuilder,
     this.listTransitionBuilder,
-    this.cardTransitionDuration = const Duration(milliseconds: 150),
-    this.listTransitionDuration = const Duration(milliseconds: 150),
+    this.cardTransitionDuration = const Duration(milliseconds: 10),
+    this.listTransitionDuration = const Duration(milliseconds: 10),
     this.listDecoration,
     this.textStyle,
     this.onItemTap,
@@ -410,7 +410,7 @@ class _BoardState extends ConsumerState<Board> {
                                                                       color: Colors
                                                                           .white,
                                                                       margin: const EdgeInsets
-                                                                              .only(
+                                                                          .only(
                                                                           top:
                                                                               20,
                                                                           right:
@@ -442,7 +442,7 @@ class _BoardState extends ConsumerState<Board> {
                                                                   height: 50,
                                                                   width: 300,
                                                                   margin: const EdgeInsets
-                                                                          .only(
+                                                                      .only(
                                                                       top: 10,
                                                                       left: 20),
                                                                   decoration: BoxDecoration(
