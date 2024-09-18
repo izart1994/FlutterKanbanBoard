@@ -130,8 +130,8 @@ class BoardProvider extends ChangeNotifier {
       scrollingRight = true;
       if (board.boardScrollConfig == null) {
         log("HEREEEE");
-        await board.controller.animateTo(board.controller.offset - 1,
-            duration: const Duration(milliseconds: 10), curve: Curves.linear);
+        await board.controller.animateTo(board.controller.offset + 1,
+            duration: const Duration(milliseconds: 1), curve: Curves.linear);
       } else {
         await board.controller.animateTo(
             board.boardScrollConfig!.offset + board.controller.offset,
