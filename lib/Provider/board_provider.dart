@@ -125,7 +125,7 @@ class BoardProvider extends ChangeNotifier {
     }
     if (board.controller.offset < board.controller.position.maxScrollExtent &&
         valueNotifier.value.dx + (draggedItemState!.width / 2) >
-            board.controller.position.viewportDimension - 100) {
+            board.controller.position.viewportDimension - 200) {
       scrolling = true;
       scrollingRight = true;
       if (board.boardScrollConfig == null) {
@@ -146,7 +146,7 @@ class BoardProvider extends ChangeNotifier {
       scrollingLeft = true;
 
       if (board.boardScrollConfig == null) {
-        await board.controller.animateTo(board.controller.offset - 100,
+        await board.controller.animateTo(board.controller.offset - 200,
             duration:
                 Duration(milliseconds: valueNotifier.value.dx < 20 ? 5 : 10),
             curve: Curves.linear);
