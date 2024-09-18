@@ -125,7 +125,7 @@ class ListItemProvider extends ChangeNotifier {
         //   child: item.prevChild,
         // ),
         TweenAnimationBuilder(
-          duration: const Duration(milliseconds: 500),
+          duration: const Duration(milliseconds: 50),
           curve: Curves.easeOut,
           tween: Tween<double>(begin: item.actualSize!.height, end: 0),
           builder: (context, value, child) {
