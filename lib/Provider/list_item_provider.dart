@@ -240,8 +240,8 @@ class ListItemProvider extends ChangeNotifier {
     //         (item.placeHolderAt == PlaceHolderAt.bottom &&
     //             (itemIndex == prov.board.lists[listIndex].items.length - 1))))
     if (getYAxisCondition(listIndex: listIndex, itemIndex: itemIndex)) {
-      // log("UP/DOWNN");
-      // print("BOTTOM PLACEHOLDER => ${willPlaceHolderAtBottom}");
+      log("UP/DOWNN");
+      print("BOTTOM PLACEHOLDER => ${willPlaceHolderAtBottom}");
       if (willPlaceHolderAtBottom &&
           item.placeHolderAt == PlaceHolderAt.bottom) {
         return;
@@ -437,7 +437,7 @@ class ListItemProvider extends ChangeNotifier {
           willPlaceHolderAtBottom ? PlaceHolderAt.bottom : PlaceHolderAt.top;
       if (willPlaceHolderAtBottom) {
         prov.move = "LAST";
-        // log("BOTTOM PLACEHOLDER X AXIS");
+        log("BOTTOM PLACEHOLDER X AXIS");
       }
 
       var isItemHidden = itemIndex - 1 >= 0 &&
