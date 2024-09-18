@@ -239,7 +239,7 @@ class _BoardListState extends ConsumerState<BoardList> {
           child: draggableNotfier.draggableType == DraggableType.list &&
                   prov.draggedItemState!.listIndex == widget.index
               ? TweenAnimationBuilder(
-                  duration: const Duration(milliseconds: 500),
+                  duration: const Duration(milliseconds: 50),
                   curve: Curves.ease,
                   tween: Tween<double>(begin: 0, end: 1),
                   builder: (context, value, child) {
