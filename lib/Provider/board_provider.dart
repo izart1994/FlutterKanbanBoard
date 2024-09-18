@@ -131,7 +131,7 @@ class BoardProvider extends ChangeNotifier {
       if (board.boardScrollConfig == null) {
         log("HEREEEE");
         await board.controller.animateTo(board.controller.offset + 100,
-            duration: const Duration(milliseconds: 100), curve: Curves.linear);
+            duration: const Duration(milliseconds: 10), curve: Curves.linear);
       } else {
         await board.controller.animateTo(
             board.boardScrollConfig!.offset + board.controller.offset,
@@ -148,7 +148,7 @@ class BoardProvider extends ChangeNotifier {
       if (board.boardScrollConfig == null) {
         await board.controller.animateTo(board.controller.offset - 100,
             duration:
-                Duration(milliseconds: valueNotifier.value.dx < 20 ? 50 : 100),
+                Duration(milliseconds: valueNotifier.value.dx < 20 ? 5 : 10),
             curve: Curves.linear);
       } else {
         await board.controller.animateTo(
